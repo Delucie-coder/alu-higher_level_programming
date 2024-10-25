@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-def print_list_integer(my_list=[]):
-    for elements in my_list:
-        print('{:d}'.format(elements))
+def square_matrix_simple(matrix=[]):
+    if not matrix:
+        return []
+    return [[x ** 2 for x in row] for row in matrix]
