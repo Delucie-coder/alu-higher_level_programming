@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def no_c(my_string):
-    my_string = my_string.translate({ord("c"): None})
-    my_string = my_string.translate({ord("C"): None})
-    return my_string
+def add_tuple(tuple_a=(), tuple_b=()):
+    a = tuple_a + (0, 0)
+    b = tuple_b + (0, 0)
+    return (a[0] + b[0], a[1] + b[1])
