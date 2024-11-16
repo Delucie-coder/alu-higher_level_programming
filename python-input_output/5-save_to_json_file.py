@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-''' returns object (Python data structure) represented by a JSON string:'''
-
-
+"""Module for writing an obj to text file"""
 import json
 
 
-def from_json_string(my_obj):
-    '''The real function that returns a json obj'''
-    return json.loads(my_obj)
+def save_to_json_file(my_obj, filename):
+    """Write an Object to a text file using JSON representation."""
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
