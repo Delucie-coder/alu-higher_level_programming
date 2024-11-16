@@ -9,13 +9,13 @@ class Student:
     age = None
 
     def __init__(self, first_name, last_name, age):
-        '''initiates the data needed'''
+        '''inits the data needed'''
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        '''returns a dictionary representation of the data'''
+        '''returns a dictionary representative of the data'''
         context = {
             'first_name': self.first_name,
             'last_name': self.last_name,
@@ -31,3 +31,8 @@ class Student:
                 if item in context.keys():
                     cont[item] = context[item]
             return cont
+
+    def reload_from_json(self, json):
+        '''reload_from_json'''
+        for item in json.keys():
+            self.__dict__[item] = json[item]
