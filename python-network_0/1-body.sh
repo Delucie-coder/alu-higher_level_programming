@@ -1,2 +1,3 @@
-ends a GET request to a URL and displays the body for 200 status code
-curl -sL "$1"
+#!/bin/bash 
+# display the body of a file 
+curl -sLfG "$1"
